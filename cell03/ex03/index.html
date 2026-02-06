@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* ปุ่ม New */
+        button#newBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button#newBtn:hover {
+            background-color: #45a049;
+        }
+
+        /* กล่องรายการ To Do (ft_list) */
+        #ft_list {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 300px;
+            min-height: 100px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* แต่ละรายการ To Do */
+        #ft_list div {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 15px;
+            cursor: pointer;
+            /* เมาส์เปลี่ยนเป็นรูปมือ */
+            transition: background-color 0.2s;
+        }
+
+        /* ตัวสุดท้ายไม่ต้องมีเส้นขีด */
+        #ft_list div:last-child {
+            border-bottom: none;
+        }
+
+        /* เมื่อเอาเมาส์ชี้ (Hover) ให้เปลี่ยนสีเพื่อสื่อว่าจะลบได้ */
+        #ft_list div:hover {
+            background-color: #ffdddd;
+            /* สีแดงอ่อน */
+            color: #d32f2f;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <button id="newBtn">New</button>
+
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

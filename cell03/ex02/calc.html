@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        input, select, input[type="submit"] {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" id="leftMember">
+        
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        
+        <input type="text" id="rightMember">
+        
+        <input type="submit" id="submitBtn" value="Try me!">
+    </div>
+
+    <script>
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+
+        const calculate = () => {
+            const leftInput = document.getElementById('leftMember').value;
+            const rightInput = document.getElementById('rightMember').value;
+            const operator = document.getElementById('operator').value;
+
+            const isPosInt = (str) => {
+                const num = Number(str);
+                return !isNaN(num) && Number.isInteger(num) && num >= 0 && str.trim() !== '';
+            };
+
+            if (!isPosInt(leftInput) || !isPosInt(rightInput)) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+
+            const l = parseInt(leftInput);
+            const r = parseInt(rightInput);
+            let result;
+
+            if ((operator === '/' || operator === '%') && r === 0) {
+                const msg = "It's over 9000!";
+                alert(msg);
+                console.log(msg);
+                return;
+            }
+
+            switch (operator) {
+                case '+': result = l + r; break;
+                case '-': result = l - r; break;
+                case '*': result = l * r; break;
+                case '/': result = l / r; break;
+                case '%': result = l % r; break;
+            }
+
+            alert(result);
+            console.log(result);
+        };
+
+        document.getElementById('submitBtn').addEventListener('click', calculate);
+    </script>
+</body>
+</html>

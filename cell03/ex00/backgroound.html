@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-0</title>
+    <link href="backgroound.css" rel="stylesheet">
+</head>
+
+<body>
+    <button id="btn">Click Me!!</button>
+    <script>
+        const button = document.getElementById('btn');
+
+        function getRandomInt() {
+            return Math.floor(Math.random() * 256);
+        }
+
+        function changeBackgroundColor() {
+            const r = getRandomInt();
+            const g = getRandomInt();
+            const b = getRandomInt();
+            const randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+            document.body.style.backgroundColor = randomColor;
+        }
+        button.addEventListener('click', changeBackgroundColor);
+    </script>
+</body>
+
+</html>
