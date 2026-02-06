@@ -1,0 +1,30 @@
+.pfpic{
+    width: 304px;
+}
+.icon {
+    width: 30px;
+}
+body {
+    text-align: center;
+    background-color: skyblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content { 
+    background-color: white;
+    width: 23%;
+    box-shadow: 10 10px 20px rgba(0, 0, 0, 0.15);
+   
+}
+button{
+    padding: 5% 41%;
+    color: white;
+    background-color: navy;
+    border: solid 2px navy;
+}
+button:hover{
+    background-color: rgb(1, 1, 96);
+}
